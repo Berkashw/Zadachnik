@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="../js/Triangle.js"></script>
+    <link rel="stylesheet" href="../css/style.css" class="">
+    <title>Triangle</title>
+</head>
+<body>
+    <div class ="">
+        <canvas id="myCanvas" width="900" height="500"
+            style="background-color:#eee; border:1px solid #ccc;">
+            Ваш браузер не поддерживает Canvas
+        </canvas>
+    </div>
+    <div class ="row">
+        <div  class="col">
+            <label class="">X1</label>        
+            <input type= "number" id="firstPointX" placeholder="X1" value =50>
+        </div>
+        <div class="col">
+            <label class="">Y1</label>
+            <input type="number" id="firstPointY" placeholder="Y1" value=50>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label class="">X2</label>
+            <input type="number" id="secondPointX" placeholder="X2" value=70>
+        </div>
+        <div class="col">
+            <label class="">Y2</label>
+            <input type="number" id="secondPointY" placeholder="X2" value=100>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label class="">X3</label>
+            <input type="number" id="thirdPointX" placeholder="X3" value=100>
+        </div>
+        <div class="col">
+            <label class="">Y3</label>
+            <input type="number" id="thirdPointY" placeholder="X2" value=50>
+        </div>
+    </div>
+    <div class ="row">
+        <button class="btn" id="triangleDraw" >Draw Triangle</button>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label class="">Triangle Perimetr</label>
+            <h2 id="trianglePerimetr"></h2>
+        </div>
+        <div class="col">
+            <label class="">Triangle Area</label>
+            <h2 id="triangleArea"></h2>
+        </div>
+    </div>
+</body>
+</html>
