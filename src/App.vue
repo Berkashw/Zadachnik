@@ -6,6 +6,13 @@
     <ul>
       <transition>
         <div class="divp" v-if="showP1">
+        <li v-for= "task in Zadachi" :key="task.link">
+        <p @click="($event) => (task.show = !task.show)">task.title</p>
+            <transition>
+              <task.link v-if="task.show"></task.link>
+            </transition>no
+
+        </li>
           <li>
             <p @click="($event) => (showz1 = !showz1)">Задача 1</p>
             <transition>
@@ -138,7 +145,9 @@
     </ul>
   </div>
 </template>
-<script>
+<script setup>
+import { ref } from 'vue'
+
 import ZadachaP1 from "./components/ZadachaP1.vue";
 import ZadachaP2 from "./components/ZadachaP2.vue";
 import ZadachaP3 from "./components/ZadachaP3.vue";
@@ -160,58 +169,55 @@ import ZadachaP18 from "./components/ZadachaP18.vue";
 import ZadachaP19 from "./components/ZadachaP19.vue";
 import ZadachaP20 from "./components/ZadachaP20.vue";
 import ZadachaP21 from "./components/ZadachaP21.vue";
-export default {
-  name: "App",
-  data() {
-    return {
-      showP1: true,
-      showz1: false,
-      showz2: false,
-      showz3: false,
-      showz4: false,
-      showz5: false,
-      showz6: false,
-      showz7: false,
-      showz8: false,
-      showz9: false,
-      showz10: false,
-      showz11: false,
-      showz12: false,
-      showz13: false,
-      showz14: false,
-      showz15: false,
-      showz16: false,
-      showz17: false,
-      showz18: false,
-      showz19: false,
-      showz20: false,
-      showz21: false,
-    };
+
+const showP1 = ref(true)
+
+
+
+const Zadachi = [
+  {
+    show:false,
+    title:'Задача 1',
+    link:'zadacha-p1'
   },
-  components: {
-    ZadachaP1,
-    ZadachaP2,
-    ZadachaP3,
-    ZadachaP4,
-    ZadachaP5,
-    ZadachaP6,
-    ZadachaP7,
-    ZadachaP8,
-    ZadachaP9,
-    ZadachaP10,
-    ZadachaP11,
-    ZadachaP12,
-    ZadachaP13,
-    ZadachaP14,
-    ZadachaP15,
-    ZadachaP16,
-    ZadachaP17,
-    ZadachaP18,
-    ZadachaP19,
-    ZadachaP20,
-    ZadachaP21,
+  {
+    show:false,
+    title:'Задача 2',
+    link:'zadacha-p2'
   },
-};
+  {
+    show:false,
+    tiltle:'Задача 3',
+    link:'zadacha-p3'
+  },
+  {
+    show:false,
+    tiltle:'Задача 4',
+    link:'zadacha-p4'
+  },
+  {
+    show:false,
+    tiltle:'Задача 5',
+    link:'zadacha-p5'
+  },
+  {
+    show:false,
+    tiltle:'Задача 6',
+    link:'zadacha-p6'
+  },
+  {
+    show:false,
+    tiltle:'Задача 7',
+    link:'zadacha-p8'
+  },
+  {
+    show:false,
+    tiltle:'Задача 8',
+    link:'zadacha-p8'
+  },
+]
+
+
 </script>
 
 <style scoped>
